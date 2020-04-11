@@ -135,10 +135,10 @@ func CallGen(order int, s *discordgo.Session, m *discordgo.MessageCreate, mark *
 		}
 	}
 	if len(botText) < 281 && len(botText) > 50 {
-		botMessage = "/tts" + botText[randStart:len(botText)-1]
+		botMessage = botText[randStart : len(botText)-1]
 	}
 
-	s.ChannelMessageSend(m.ChannelID, botMessage)
+	s.ChannelMessageSend(m.ChannelID, "/tts"+botMessage)
 }
 
 func generateMarkov(chain *gomarkov.Chain) string {
