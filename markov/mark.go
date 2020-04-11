@@ -138,7 +138,11 @@ func CallGen(order int, s *discordgo.Session, m *discordgo.MessageCreate, mark *
 		botMessage = botText[randStart : len(botText)-1]
 	}
 
-	s.ChannelMessageSend(m.ChannelID, "/tts"+botMessage)
+	msg := discordgo.MessageSend{
+		Content: botMessage,
+		Tts:     true,
+	}
+	s.ChannelMessageSendComplex(m.ChannelID, &msg)
 }
 
 func generateMarkov(chain *gomarkov.Chain) string {
