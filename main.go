@@ -149,7 +149,7 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	// If the message is "ping" reply with "Pong!"
 	if m.Content == "!help" {
 		s.ChannelMessageSend(m.ChannelID,
-			">Commands are: \n!stop (stop all audio)\n!create (profile)\n!bet (x)\n!clean/!clear (delete last 100 bot related messages)\n!fbux\n!broke (irreversibly resets flaggbux to 100)\n!meme\n!memecount\n!u (sound)\n!gear (sound)\n!mark (create markov chain data, only used once)\n!gen (generate random sentence)")
+			">Commands are: \n!stop (stop all audio)\n!create (profile)\n!bet (x)\n!clean/!clear (delete last 100 bot related messages)\n!fbux\n!broke (irreversibly resets flaggbux to 100)\n!meme\n!memecount\n!u (sound)\n!gear (sound)\n!mark (create markov chain data, only used once)\n!gen (generate random sentence)x")
 	}
 
 	if m.Content == "!clean" || m.Content == "!clear" {
