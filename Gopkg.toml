@@ -1,0 +1,33 @@
+# Refer to https://golang.github.io/dep/docs/Gopkg.toml.html
+# for detailed Gopkg.toml documentation.
+
+[metadata.heroku]
+  root-package = "gobot"
+  go-version = "go1.11.5"
+
+[[override]]
+  branch = "master"
+  name = "github.com/layeh/gopus"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/bwmarrin/dgvoice"
+
+[[constraint]]
+  name = "github.com/bwmarrin/discordgo"
+  version = "0.19.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/franela/goreq"
+
+[[constraint]]
+  name = "github.com/mongodb/mongo-go-driver"
+  version = "0.3.0"
+
+[[constraint]]
+  name = "github.com/otium/ytdl"
+  version = "0.5.1"
+
+[prune]
+  go-tests = true
