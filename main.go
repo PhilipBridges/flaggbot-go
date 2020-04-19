@@ -111,7 +111,7 @@ func main() {
 	}()
 
 	go func() {
-		c := time.Tick(time.Minute * 160)
+		c := time.Tick(time.Minute * 360)
 		for range c {
 			handlers.AutoHelp(dg)
 		}
