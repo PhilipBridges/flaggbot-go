@@ -60,8 +60,7 @@ func main() {
 	stopChannel = make(chan bool)
 	// START MONGODB STUFF *****
 	// Put your mongo DB address here
-	// client, err := mongo.Connect(context.TODO(), "mongodb://admin:admin1@ds141631.mlab.com:41631/botdb")
-	client, err := mongo.Connect(context.TODO(), "mongodb+srv://admin:admin1@botdb.gahkj.mongodb.net/botdb?retryWrites=true&w=majority")
+	client, err := mongo.Connect(context.TODO(), "")
 
 	if err != nil {
 		log.Fatal(err)
